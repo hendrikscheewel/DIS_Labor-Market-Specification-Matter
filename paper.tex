@@ -168,26 +168,26 @@ countries}
   \centering
       \caption{Participation rate}
       \label{fig:stylized_facts_a}
-  \includegraphics[width=\linewidth]{graphs/stylized_Participation_rate.pdf}
+  \includegraphics[width=\linewidth]{\graphPath stylized_Participation_rate.pdf}
 \end{subfigure}%
 \begin{subfigure}{.45\linewidth}
   \centering
   \caption{Unemployment rate}
         \label{fig:stylized_facts_b}
-  \includegraphics[width=\linewidth]{graphs/stylized_Unemployment_rate.pdf}
+  \includegraphics[width=\linewidth]{\graphPath stylized_Unemployment_rate.pdf}
 \end{subfigure}
 \\[0.5cm]
 \begin{subfigure}{.45\linewidth}
   \centering
       \caption{Employment rate}
      \label{fig:stylized_facts_c}
-  \includegraphics[width=\linewidth]{graphs/stylized_Employment_rate.pdf}
+  \includegraphics[width=\linewidth]{\graphPath stylized_Employment_rate.pdf}
 \end{subfigure}%
 \begin{subfigure}{.45\linewidth}
   \centering
  \caption{Share of college graduates}
       \label{fig:stylized_facts_d}
-  \includegraphics[width=\linewidth]{graphs/stylized_College_share.pdf}
+  \includegraphics[width=\linewidth]{\graphPath stylized_College_share.pdf}
 \end{subfigure}
 \\[0.5cm]
 {\footnotesize \textbf{Notes:} Figure~\ref{fig:stylized_facts} shows the results for 20 selected countries: the 15 members states of the European Union (EU15), the US, Canada, Australia, Switzerland and Japan.}
@@ -197,7 +197,7 @@ It can be seen in Figure~\ref{fig:stylized_facts_a}, that immigrants and natives
 
 As for unemployment rates, Figure~\ref{fig:stylized_facts_b} shows that cross-country patterns are much stronger than for participation rates. The correlation between natives' and immigrants' unemployment rates exceeds 0.942. However, immigrants suffer from higher unemployment than natives in all considered countries. On average (unweighted mean), being an immigrant comes along with an unemployment rate that is 1.7 times as high as the native's rate. The disparity is particularly pronounced in Finland and Spain where the unemployment rate of foreign-born workers is more than 10 percentage points higher. 
 
-Figure~\ref{fig:stylized_facts_c} depicts origin-specific employment rates. The correlation between native and immigrant employment rates is poor (0.276). On average (unweighted mean), the employment rate of immigrants is 16 percentage points smaller. It is 20-30 percentage points smaller in Belgium, Denmark and Sweden. Exceptions are Greece, Italy and Portugal, where immigrants' employment rates are slightly higher than those of natives.
+Figure~\ref{fig:stylized_facts_c} depicts origin-specific employment rates. The correlation between native and immigrant employment rates is poor (0.276). On average (unweighted mean), the employment rate of immigrants is 16 percentage points smaller. It is 20 to 30 percentage points smaller in Belgium, Denmark and Sweden. Exceptions are Greece, Italy and Portugal, where immigrants' employment rates are slightly higher than those of natives.
 
 Concerning the shares of college graduates by origin, we find again a relatively high correlation between natives and foreign-born (0.645), as illustrated in Figure~\ref{fig:stylized_facts_d}. On average (unweighted mean), the education level immigrants is almost identical to that of natives. However, immigrants are more educated than natives in Canada, the United Kingdom, Australia, Ireland, Switzerland, Luxembourg, Portugal and Austria. They are less educated than natives in the other countries (especially in Belgium). These differences in education structure are governing the average income and inequality responses to immigration. The average income effect depends on how immigration affects the demand for labor, public revenues and total factor productivity. More educated immigrants induce more beneficial effects. As for inequality, the impacts of immigration on wages and employment of existing workers depend on whether and to what extent migrants’ skills are complements or substitutes to the skills of existing workers. More educated immigrants exhibit complementarities with low-skilled natives, which reduces income disparities. On the contrary, low-skilled immigration tends to increase income inequality.
 
@@ -390,7 +390,7 @@ vacancy, which occurs at a probability $q(\theta _{s})$.
 
 For individuals supplying labor, the steady-state discounted present value
 of employment, $\mathcal{J}_{s}^{o,E}$, and unemployment, $\mathcal{J}%
-_{s}^{o,U}$, are given by: 
+_{s}^{o,U}$, are given by:\footnote{In the benchmark version of our model we assume that immigrant and natives face the same search costs when looking for a job in the host country. In Section \ref{quantitative_analysis} we instead take into account a model variant in which immigrants and natives face different search costs in the labor market. } 
 \begin{align}
 r\mathcal{J}_{s}^{o,E}=& (1-\tau )w_{o,s}-\delta _{o,s}\left[ \mathcal{J}%
 _{s}^{o,E}-\mathcal{J}_{s}^{o,U}\right] +T^y_{o,s} ,  \label{Eq:JE} \\
@@ -414,8 +414,8 @@ Combining Eqs. (\ref{Eq:JV}) and (\ref{Eq:JF}), in steady state the job
 creation condition is thus given by:
 \begin{equation}
 \frac{\kappa _{s}}{q\left( \theta _{s}\right) }=\left( 1-\phi _{s}\right) %
-\left[ \frac{\widetilde{p}_{s}^{n}-w_{s}^{n}}{r+\delta _{s}^{n}}\right] +\phi _{s}\left[ 
-\frac{\widetilde{p}_{s}^{m}-w_{s}^{m}}{r+\delta _{s}^{m}}\right] .
+\left[ \frac{\widetilde{p}_{ns}-w_{ns}}{r+\delta _{ns}}\right] +\phi _{s}\left[ 
+\frac{\widetilde{p}_{ms}-w_{ms}}{r+\delta _{ms}}\right] .
 \label{Eq:JobCreation}
 \end{equation}%
 Eq. (\ref{Eq:JobCreation}) states that the expected cost of creating a
@@ -628,18 +628,14 @@ education-mix variants of the one-percent immigration shock:
     \item The skill structure of the immigration shock is identical to the actual structure of the working-age, foreign-born population living in the destination country.
 \end{itemize}
 
-\emph{Thirdly}, we consider seven specifications of our model. Remember our
+\emph{Thirdly}, we consider eight specifications of our model. Remember our
 goal is to assess whether the labor market specification is a decisive
 ingredient governing the sign and the size of the welfare and inequality
 responses to immigration. Our benchmark model is the one depicted %CHECK% 
 in Section~\ref{model} with endogenous wages, labor force participation rates, and unemployment
-rates. Departing from this benchmark framework, we consider six alternative
+rates. Departing from this benchmark framework, we consider seven alternative
 specifications combining endogenous or exogenous levels of labor force
-participation and unemployment ($LFP_{end}$ vs. $LFP_{exo}$, and $UR_{end}$
-vs. $UR_{exo}$) and, in the exogenous cases, a calibration on empirically
-observed or full employment and participation levels ($LFP_{exo}$ vs. $LFP=1$, and $UR_{exo}$
-vs. $UR=0$). This allows us to identify whether our findings are strongly
-influenced by some labor market features.
+participation and unemployment as well as different assumptions on wage formation. This allows us to identify whether our findings are strongly influenced by some labor market features.
 
 The rest of this section is organized in three parts. Firstly, in Section~\ref{parameterization} we explain our calibration strategy for the benchmark
 model. Then, we analyze the welfare and inequality effects of immigration in Section~\ref{sensitivity_to_labor_market}. Finally, we analyze the robustness of our findings to key elasticities in Section~\ref{sensitivity_to_parameters}.
@@ -647,19 +643,19 @@ model. Then, we analyze the welfare and inequality effects of immigration in Sec
 \subsection{Parameterization} \label{parameterization}
 
 We parameterize our model to reflect the economic and socio-demographic features of 20 OECD countries (EU15 member states, the US, Canada, Australia, Switzerland and Japan). 
-Our model includes a total of 40 exogenous parameters which need to be determined in order to perform a comparative statics analysis. Most of these parameters vary across countries and are set to match moments taken from the data, while some are assumed to be country-invariant and taken from the empirical literature. As in our simulation exercises we focus on analyzing steady-state variations deriving from different types of migration shocks.\footnote{All scale parameters which do not affect our results (namely the TFP level $A$, the firm's entry cost  $\psi$, and the matching efficiency $\zeta$) are, for simplicity, normalized to unity in all countries.} In what follows, we first describe the data sources used for the model, and then discuss our calibration strategy.
+Our model includes a total of 40 exogenous parameters which need to be determined in order to perform a comparative statics analysis. Most of these parameters vary across countries and are set to match moments taken from the data, while some are assumed to be country-invariant and taken from the empirical literature. As in our simulation exercises we focus on analyzing steady-state variations deriving from different types of migration shocks, all scale parameters which do not affect our results (namely the TFP level $A$, the firm's entry cost  $\psi$, and the matching efficiency $\zeta$) are, for simplicity, normalized to unity in all countries. In what follows, we first describe the data sources used for the model, and then discuss our calibration strategy.
 
 \emph{Population and labor force data.} -- In  line  with  Section~\ref{stylized_facts},  we  use  the  Database  on  Immigrants in OECD countries (DIOC) described in \citet{Arslan2014}. For each OECD country, the database covers the census round 2010 and documents the structure of the population by country of origin, by age, by education level, by duration of stay, and by labor market status.  Immigrants who did not report their origin country are distributed proportionately to observations. We first classify individuals by country of origin, and then define the college-educated group as individuals who have at least one year of college education or a bachelor degree (ISCED 5).  Those with no education and with pre-primary, primary or secondary education completed are defined as the less educated. We classify individuals who did not report their education level
 as low-skilled.  As for the age structure, we define individuals aged 25 to 64 as the working
 aged group, and  those aged 65 and over as the retirees group. Individuals who did not report their age are assumed to belong to the working age group. The important feature of including data on labor market status allow us to also identify, for each origin country and skill group, the proportions of employed, unemployed and inactive individuals aged 25 to 64.
 
-\emph{Labor income data.} -- Data on the wage ratio between college-educated and less educated workers are taken from the \textit{Education at a Glance 2012} report of the OECD, and used  as a proxy for the average return to skill $w_h/w_l$. Data on the wage ratio between native and immigrant workers are obtained from \citet{Buchel2005} and from \citet{Docquier2014}.
+\emph{Labor income data.} -- Data on the wage ratio between college-educated and less educated workers are taken from the \textit{Education at a Glance 2012} report of the OECD, and used  as a proxy for the average return to skill $w_h/w_l$. Data on the wage ratio between native and immigrant workers are obtained from \citet{Buchel2005} and from \citet{Docquier2014}.\footnote{For Greece we consider the same wage ratio data used for Spain and Portugal.}
 
 \emph{Fiscal data.} -- Comparable aggregate data on public finances are obtained from the \textit{Annual National Accounts} harmonized by the OECD. In line with \citet{Burzynski2018}, we use it to identify the consumption tax rate $v$, the redistributive transfers $T^a_{o,s}$, and the ratio of public expenditure to GDP. We  also  identify  the  amount  of  public  consumption  and  treat  it  as a  homogeneous  transfer  to  all  residents  (as  a  part  of $T^a_{o,s}$). As in \citet{Aubry2016},  we also use the Social Expenditure Database (SOCX) of the OECD to decompose social protection expenditures, and the European Union Statistics on Income and Living Conditions (EU-SILC, provided by Eurostat) to disaggregate education and social protection transfers received by the natives; we identify transfers to natives by education level and by age group. We add these transfers to public consumption per capita and  use  it  as  a  proxy  for $T^a_{n,s}$. Finally, SOCX is also used to take data for public unemployment spending as percentage of GDP.
 
 \emph{Calibration of common parameters.} -- Our model includes eight common parameters for which a consensus range of values can be found in the existing literature. Our benchmark values are reported in Table~\ref{tab:general_parameters}.
 
-We set the elasticity of substitution between goods $\epsilon=7$, so as to allow it to fall within the estimated range of $3$ to $8.4$ reported in \citet{Feenstra1994}, implying conservative market size effects. Following \citet{Ottaviano2012}, we assume the elasticity of substitution between skill groups and origin groups of $\sigma_1 =2$ and $\sigma_2 =20$, respectively. We set $\eta=10$, so to imply an elasticity of labor supply to income of $0.1$, as in \citet{Evers2008}. In line with \citet{Chassamboulli2014} and similarly related literature, the monthly interest rate $r$ is set to $0.4\%$. Following the bulk of the literature on search and matching, we set the matching elasticity parameter $\nu$ to $0.5$, which is within the range of estimates reported in \citet{Petrongolo2001} and \citet{Mortensen2007}, as well as the worker's bargaining power $\beta$ to $0.5$, so as to satisfy the Hosios condition (see \citet{Hosios1990}). Finally, we normalize the low-skilled vancancy cost $\kappa_l$ to the same value adopted in \citet{Chassamboulli2014} and \citet{Battisti2018}. In Section~\ref{sensitivity_to_parameters}, we consider alternative levels of $\epsilon, \sigma_1,\sigma_2, \eta$ and $\kappa_l$ in our robustness analysis.
+We set the elasticity of substitution between goods $\epsilon=7$, so as to allow it to fall within the estimated range of $3$ to $8.4$ reported in \citet{Feenstra1994}, implying conservative market size effects. Following \citet{Ottaviano2012}, we assume the elasticity of substitution between skill groups and origin groups of $\sigma_1 =2$ and $\sigma_2 =20$, respectively. Following \citet{ChettyEtAl2011} and \citet{RogersonWallenius2013}, we set $\eta=4/3$, so to imply an elasticity of labor supply to income of $0.75$. In line with \citet{Chassamboulli2014} and similarly related literature, the monthly interest rate $r$ is set to $0.4$ percent. Following the bulk of the literature on search and matching, we set the matching elasticity parameter $\nu$ to $0.5$, which is within the range of estimates reported in \citet{Petrongolo2001} and \citet{Mortensen2007}, as well as the worker's bargaining power $\beta$ to $0.5$, so as to satisfy the Hosios condition (see \cite{Hosios1990}). Finally, we normalize the low-skilled vancancy cost $\kappa_l$ to the same value adopted in \citet{Chassamboulli2014}. In Section~\ref{sensitivity_to_parameters}, we consider alternative levels of $\epsilon, \sigma_1,\sigma_2, \eta$ in our robustness analysis.
 
 \begin{table}[htb!]
 \centering
@@ -673,7 +669,7 @@ Parameters & Description & Value & Source \\ \hline
 $\epsilon $ & Elast. subst. between goods & $7$ & \cite{Feenstra1994}\\
 $\sigma_1$ & Elast. subst. between skills & $2$ & \cite{Ottaviano2012}\\
 $\sigma_2$ & Elast. subst. immig/natives & $20$ & \cite{Ottaviano2012}\\
-$1/ \eta$ & Elast. of labor supply & $0.1$ & \cite{Evers2008}\\
+$1/ \eta$ & Elast. of labor supply & $0.75$ & \cite{ChettyEtAl2011}\\
 $\kappa_l$ & Low-skilled vacancy cost & $0.421$ & \cite{Chassamboulli2014}\\
 $r$ & Interest rate (monthly) & $0.004$ & \cite{Chassamboulli2014}\\
 $\nu$ & Matching elasticity & $0.5$ & \cite{Petrongolo2001}\\
@@ -684,7 +680,7 @@ $ \beta$ & Worker bargaining power & $0.5$ & \cite{Hosios1990}\\
 
 \emph{Calibration of country-specific parameters.} -- The model also includes other parameters that vary across countries to match observed economic and socio-demographic characteristics. We use all the degrees of freedom of the data to identify these parameters. Table~\ref{tab:parameters_country_specific} reports the mean and standard error of our 29 country-specific parameters, which are directly taken from the data (15 parameters) or calibrated to match some moments (14 parameters).
 
-The firms’ preferences for workers are calibrated to match the wage ratios between workers. Hence, $\alpha$ and $\lambda$ are calibrated to match, respectively, the average return to skill $w_h/w_l$ and the average native wage premium $w_n/w_m$. The separation rates $\delta_{o,s}$ are set so as to match the unemployment rates observed in the DIOC data. Specifically, separation rates are calibrated to be, on average, larger for migrants than for natives, reflecting the higher unemployment rate of immigrants (especially less-educated ones). The vacancy ratio $\kappa_h / \kappa_l$ is parameterized to match the wage ratio $w_h/w_l$, implying a higher cost endured by firms with unfilled vacancies for high-skilled positions. The disutility of labor parameters $\phi^y_{o,s}$ are calibrated to match the labor force participation rates provided by the DIOC data. A larger level of $\phi^y_{m,l}$ implies a lower participation rate of less-educated immigrants compared to other cohorts.
+The firms’ preferences for workers are calibrated to match the wage ratios between workers. Hence, $\alpha$ and $\lambda$ are calibrated to match, respectively, the average return to skill $w_h/w_l$ and the average native wage premium $w_n/w_m$. The separation rates $\delta_{o,s}$ are set so as to match the unemployment rates observed in the DIOC data. Specifically, separation rates are calibrated to be, on average, larger for migrants than for natives, reflecting the higher unemployment rate of immigrants (especially less-educated ones). The vacancy ratio $\kappa_h / \kappa_l$ is parameterized to match the wage ratio $w_h/w_l$, implying a higher cost endured by firms with unfilled vacancies for high-skilled positions.\footnote{This is in line with the empirical evidence that hiring costs generally increase with skill requirements for job applicants \citep[see][]{BlatterEtAl2012}. In Section~\ref{sensitivity_to_parameters}, we consider an alternative level of $\kappa_h / \kappa_l$.} The disutility of labor parameters $\phi^y_{o,s}$ are calibrated to match the labor force participation rates provided by the DIOC data. A larger level of $\phi^y_{m,l}$ implies a lower participation rate of less-educated immigrants compared to other cohorts.
 
 As far as fiscal parameters are concerned, the replacement rate $\mu$ is set to match the level of public unemployment spending as percentage of GDP matches observed data.\footnote{We use public unemployment spending data (year  2013) from OECD SOCX for all countries but Denmark, which is missing in the SOCX database. Because of this, we used data on expenditure on social protection (year 2013) taken from Eurostat social protection statistics in order to calibrate Denmark's replacement rate.} Further, we calibrate the level of public transfers so to match the government expenditure to GDP as well as transfers by different cohorts taken from the OECD \textit{Annual National Accounts} database. Using the same data source, we also calibrate the consumption tax rate $v$. Finally, demographic shares for all cohorts are parameterized in order to match DIOC data.\footnote{Note that the DIOC dataset provides data on individuals aged 65 and over (here interpreted as retirees) by skill group, but not by origin group. Hence, in order to obtain a moment to match $N^r_{o,s}$, we assume that retirees origin distribution follows the same proportion of the younger individuals, i.e. $N^r_n/N^r_m=N^y_n/N^y_m$.}
 
@@ -693,69 +689,36 @@ As far as fiscal parameters are concerned, the replacement rate $\mu$ is set to 
 \par
 \caption{Parameters varying across countries} \label{tab:parameters_country_specific}
 \footnotesize
-\begin{tabular}{llllll}
-\hline\hline
-Parameters & Description & Mean & S.d. & Moment matched \\ \hline
-\multicolumn{5}{l}{\textit{Labor market parameters}} \\ \hline
-$\alpha$ & Firms' preference to LS & $0.417$ & $0.051$ & Matches avg. return to skill $w_h/w_l$\\
-$\lambda$ & Firms' preference to migrants & $0.479$ & $0.045$ & Matches avg. wage ratio $w_n/w_m$\\
-$\delta_{n,h}$ & Break-up rate of natives HS & $0.022$ & $0.017$ & Matches unempl. rate $u_{n,h}$\\
-$\delta_{n,l}$ & Break-up rate of natives LS & $0.048$ & $0.039$ & Matches unempl. rate $u_{n,l}$\\
-$\delta_{m,h}$ & Break-up rate of migrants HS & $0.047$ & $0.035$ & Matches unempl. rate $u_{m,h}$\\
-$\delta_{m,l}$ & Break-up rate of migrants LS & $0.074$ & $0.057$ & Matches unempl. rate $u_{m,l}$\\
-$\kappa_h/\kappa_l$ & Vacancy costs ratio & $1.960$ & $0.351$ & Matches  $w_h/w_l$\\
-$\Phi^y_{n,h}$ & Labor disutility of natives HS & $1.063$ & $0.325$ & Matches  LFP rate of natives HS\\
-$\Phi^y_{n,l}$ & Labor disutility of natives LS & $3.509$ & $2.088$ & Matches  LFP rate of natives LS\\
-$\Phi^y_{m,h}$ & Labor disutility of migrants HS & $2.856$ & $1.810$ & Matches  LFP rate of migrants HS\\
-$\Phi^y_{m,l}$ & Labor disutility of migrants LS & $16.33$ & $25.20$ & Matches  LFP rate of migrants LS\\
-\hline
-\multicolumn{5}{l}{\textit{Fiscal parameters}} \\ \hline
-$\mu$ & Replacement rate & $0.201$ & $0.128$ & Matches gov. exp. on unempl./GDP\\
-$v$ & Consumption tax rate & $0.169$ & $0.044$ & Matches OECD data\\
-$T^y_{n,h}$ & Transfers to natives HS & $0.049$ & $0.013$& Matches gov. exp./GDP \\
-$T^y_{n,l}/T^y_{n,h}$ & Transfers ratio NL/NH & $0.942$ &$0.159$ & Matches OECD data\\
-$T^y_{m,h}/T^y_{n,h}$ & Transfers ratio MH/NH & $1,383$& $0.488$ & Matches OECD data\\
-$T^y_{m,l}/T^y_{n,h}$ & Transfers ratio ML/NH& $1.300$ & $0.440$ & Matches OECD data\\
-$T^r_{n,h}/T^y_{n,h}$ & Transfers ratio ret. NH/NH& $2.545$ & $0.993$ & Matches OECD data\\
-$T^r_{n,l}/T^y_{n,h}$ & Transfers ratio ret. NL/NH& $1.800$ & $0.530$ & Matches OECD data\\
-$T^r_{m,h}/T^y_{n,h}$ & Transfers ratio ret. MH/NH& $2.446$& $0.935$ & Matches OECD data\\
-$T^r_{m,l}/T^y_{n,h}$ & Transfers ratio ret. ML/NH & $1.972$ & $0.819$ & Matches OECD data\\
-\hline
-\multicolumn{5}{l}{\textit{Demografic sizes as share of total population}} \\ \hline
-$N^y_{n,h}$ & Young natives HS &$0.195$ &$0.059$ & Matches OECD data\\
-$N^y_{n,l}$ & Young natives LS &$0.439$ &$0.060$ & Matches OECD data\\
-$N^y_{m,h}$ & Young migrants HS & $0.047$&$0.038$ & Matches OECD data\\
-$N^y_{m,l}$ & Young migrants LS &$0.102$ &$0.066$ & Matches OECD data\\
-$N^r_{n,h}$ & Retired natives HS & $0.033$&$0.034$ & Matches OECD data\\
-$N^r_{n,l}$ & Retired natives LS & $0.164$&$0.048$ & Matches OECD data\\
-$N^r_{m,h}$ & Retired migrants HS & $0.004$&$0.004$ & Matches OECD data\\
-$N^r_{m,l}$ & Retired migrants LS & $0.015$&$0.010$ & Matches OECD data
-\\ \hline\hline
-\end{tabular}
+\input{tables/country_specific_parameters}
 \end{table}
 
 
 \subsection{Does the labor market specification matter? \label{sensitivity_to_labor_market}}
 
-We examine the effects of a one-percent increase in the labor force due to immigration using seven labor market variants of our model, and considering three education-mix variants of the immigration shock (low-skilled, high-skilled, actual destination-specific mix). The \textit{Benchmark} variant of the model assumes endogenous unemployment and labor force participation rates (what can be referred to as "$UR_{end},~LFP_{end}$" given the notations below), in line with the model of Section~\ref{model}. Departing from this benchmark model, we consider six alternative labor market specifications:
+We examine the effects of a one-percent increase in the labor force due to immigration using seven labor market variants of our model, and considering three education-mix variants of the immigration shock (low-skilled, high-skilled, actual destination-specific mix). The \textit{Benchmark} variant of the model assumes endogenous unemployment and labor force participation rates (what can be referred to as "$UR_{end},~LFP_{end}$" given the notations below), in line with the model of Section~\ref{model}. Departing from this benchmark model, we consider seven alternative labor market specifications:
 
 \begin{itemize}
-\item Spec. "$UR_{exo},~LFP_{end}$" assumes exogenous unemployment rates (calibrated at their observed levels). This scenario is used in \citet{Burzynski2018}.
-\item Specification "$UR_{exo},~LFP_{exo}$" assumes exogenous unemployment and exogenous labor force participation rates (calibrated at their observed levels).
-\item Specification "$UR_{exo},~LFP=1$" assumes exogenous unemployment rates (calibrated at their observed levels) and exogenous labor force
-participation (equal to unity).
-\item Specification "$UR=0,~LFP=1$" assumes exogenous unemployment rates (equal to zero) and exogenous labor force participation (equal to unity). This scenario characterizes the simplest competitive labor market model.
-\item Specification "$UR_{end},~LFP_{exo}$" assumes exogenous labor force participation rates (calibrated at their observed levels).
-\item Specification "$UR_{end},~LFP=1$" assumes exogenous labor force participation rates (equal to unity). %CHECK%
+\item Specification ``$UR_{exo},~LFP_{end}$", which assumes exogenous unemployment rates (calibrated at their observed levels) and that wages equal marginal productivity of labor, such that $u_{o,s} \equiv  \Bar{u}_{o,s}$ and  $w_{o,s} \equiv \widetilde{p}_{o,s}$ . This scenario is used in \citet{Burzynski2018}.
+\item Specification ``$UR_{exo},~LFP_{exo}$", which assumes exogenous unemployment and labor force participation rates (calibrated at their observed levels) and that wages equal marginal productivity of labor, such that $u_{o,s} \equiv  \Bar{u}_{o,s}$, $\ell^a_{o,s} \equiv \Bar{\ell}^a_{o,s} $ and  $w_{o,s} \equiv \widetilde{p}_{o,s}$.
+\item Specification ``$UR_{exo},~LFP=1$", which assumes exogenous unemployment rates (calibrated at their observed levels), full labor force participation and wages equal to marginal productivity of labor, such that $u_{o,s} \equiv  \Bar{u}_{o,s}$, $\ell^a_{o,s} \equiv 0 $ and  $w_{o,s} \equiv \widetilde{p}_{o,s}$.
+\item Specification ``$UR=0,~LFP=1$", which assumes full employment and labor force participation and that wages equal marginal productivity of labor, such that $u_{o,s} \equiv  0$, $\ell^a_{o,s} \equiv 0 $ and  $w_{o,s} \equiv \widetilde{p}_{o,s}$. This scenario characterizes the simplest competitive labor market model.
+\item Specification ``$UR_{end},~LFP_{exo}$", which assumes exogenous labor force participation rates (calibrated at their observed levels), $\ell^a_{o,s} \equiv \Bar{\ell}^a_{o,s} $.
+\item Specification ``$UR_{end},~LFP=1$", which assumes full labor force participation rates (equal to unity), such that $\ell^a_{o,s} \equiv 0 $. %CHECK
+\item Specification ``$DOO$", which assumes that immigrant and native workers are perfect substitutes in production but face different outside options when looking for a job, such that the bargained wage rate of immigrant workers is given by
+\begin{equation*}
+  w_{m,s}=\frac{\beta \left[ r+\delta _{m,s}+m\left( \theta _{s}\right) \right]
+\widetilde{p}_{m,s}-\Lambda \left(1-\beta\right)\left( r+\delta _{m,s} \right)}{\left( r+\delta _{m,s}\right) \left[ 1-\left( 1-\beta \right)
+\left( \tau +\mu \right) \right] +\beta m\left( \theta _{s}\right) },
+\end{equation*}
+where, along the same lines of \citet{Chassamboulli2014} and \citet{Battisti2018}, $\Lambda$ is the additional cost that immigrants face when they search for a job in the host country labor market.\footnote{As argued in \citet{Chassamboulli2014} and \citet{Battisti2018}, lower wages for immigrants relative to similarly skilled natives could derive from different search costs, rather than from an imperfect substituability in production. Indeed, immigrants may face an additional search cost due to lack of social network, limited knowledge of labor market institutions, or language proficiency, which leads to a lower bargained wage for immigrants. For this reason, in this model variant the parameter $\Lambda$ is calibrated to match as closely as possible the observed wage ratio $w_n/w_m$. }
 \end{itemize}
-
 We first describe the average welfare effects, and then discuss the inequality effects.
 
 \subsubsection{Average welfare effects}
 
 The average welfare effects of immigration are described in Figure~\ref{fig:utility_effects}. Figures \ref{fig:utility_effects_b} to \ref{fig:utility_effects_d} show the welfare effects of the three immigration shocks (low-skilled, high-skilled, and actual education mix) by country. Whatever the skill structure of the shock, results obtained under various labor market variants are highly correlated and in the same order of magnitude. In addition, the labor market specification hardly affects the ranking of countries. 
 
-Unsurprisingly, the greatest welfare effects are obtained when immigrants are highly educated. The magnitude of the gain depends on the structure of the native labor force and on domestic fiscal/redistributive policies. The average welfare gain ranges from 0.2-0.5\% in Denmark to 2.1-2.4\% in Japan. At the actual education mix, the welfare impact of immigration are usually beneficial regardless of the labor market structure. The only exceptions to the rule are France and Denmark, where negative or zero welfare effect are obtained when unemployment and labor force participation rates are treated as exogenous variables. More pessimistic results emerge when immigrants are all low-skilled. The welfare effect is always positive or nil in nine countries; it is always negative in four countries; in the remaining seven countries, the sign of the welfare effect depends on the labor market specification. In the low-skilled immigration experiment, the ranking of countries is affected more by the labor market specification (see Belgium, Austria, Sweden and Denmark under the "$UR_{exo},~LFP_{exo}$" variant).
+Unsurprisingly, the greatest welfare effects are obtained when immigrants are highly educated. The magnitude of the gain depends on the structure of the native labor force and on domestic fiscal/redistributive policies. The average welfare gain ranges from 0.2 to 0.5 percent in Denmark to 2.1 to 2.4 percent in Japan. At the actual education mix, the welfare impact of immigration are usually beneficial regardless of the labor market structure. The only exceptions to the rule are France and Denmark, where negative or zero welfare effect are obtained when unemployment and labor force participation rates are treated as exogenous variables. More pessimistic results emerge when immigrants are all low-skilled. The welfare effect is always positive or nil in nine countries; it is always negative in four countries; in the remaining seven countries, the sign of the welfare effect depends on the labor market specification. In the low-skilled immigration experiment, the ranking of countries is affected more by the labor market specification (see Belgium, Austria, Sweden and Denmark under the "$UR_{exo},~LFP_{exo}$" variant).
 
 In Figure~\ref{fig:utility_effects_a}, we compute the unweighted mean effects of all countries under the seven variants of the model. In line with country-specific results (see Figures \ref{fig:utility_effects_b} to \ref{fig:utility_effects_d}), the most optimistic (or least pessimistic) results are obtained under the specifications with endogenous unemployment rates, whatever the skill structure of immigration. On average, endogenizing unemployment increases the semi-elasticity of utility to immigration by 0.001 to 0.002, which is negligible at the actual education mix or when new immigrants are high-skilled. In addition, endogenizing labor force participation rates has virtually no effect on the average welfare response to immigration.
 
@@ -772,25 +735,25 @@ force) -- Sensitivity to labor market modeling}
 \begin{subfigure}{.45\linewidth}
 \caption{Unweighted mean effect} \label{fig:utility_effects_a}
   \centering
-  \includegraphics[width=\linewidth]{graphs/Utility.pdf}
+  \includegraphics[width=\linewidth]{\graphPath Utility.pdf}
 \end{subfigure}
 \hfill
 \begin{subfigure}{.45\linewidth}
   \centering
   \caption{Effect by country: low-skilled immigration} \label{fig:utility_effects_b}
-  \includegraphics[width=\linewidth]{graphs/Utility_LS.pdf}
+  \includegraphics[width=\linewidth]{\graphPath Utility_LS.pdf}
 \end{subfigure}
 \\[0.5cm]
 \begin{subfigure}{.45\linewidth}
   \centering
   \caption{Effect by country: high-skilled immigration} \label{fig:utility_effects_c}
-  \includegraphics[width=\linewidth]{graphs/Utility_HS.pdf}
+  \includegraphics[width=\linewidth]{\graphPath Utility_HS.pdf}
 \end{subfigure}%
 \hfill
 \begin{subfigure}{.45\linewidth}
   \centering
   \caption{Effect by country: actual education mix} \label{fig:utility_effects_d}
-  \includegraphics[width=\linewidth]{graphs/Utility_LS+HS.pdf}
+  \includegraphics[width=\linewidth]{\graphPath Utility_LS+HS.pdf}
 \end{subfigure}
 \\[0.5cm]
 {\footnotesize \textbf{Notes:} Figure~\ref{fig:utility_effects} shows the results for 20 selected countries: the 15 members states of the European Union (EU15), the US, Canada,
@@ -837,37 +800,37 @@ force) -- Sensitivity to labor market modeling}
 \begin{subfigure}{.3\linewidth}
 \caption{Wage effect} \label{fig:decomp_mean_W}
   \centering
-  \includegraphics[width=\linewidth]{graphs/qWn.pdf}
+  \includegraphics[width=\linewidth]{\graphPath qWn.pdf}
 \end{subfigure}
 \hfill
 \begin{subfigure}{.3\linewidth}
   \centering
 \caption{Employment effect} \label{fig:decomp_mean_UR}
-  \includegraphics[width=\linewidth]{graphs/qURn.pdf}
+  \includegraphics[width=\linewidth]{\graphPath qURn.pdf}
 \end{subfigure}
 \hfill
 \begin{subfigure}{.3\linewidth}
   \centering
 \caption{Labor force participation effect} \label{fig:decomp_mean_ln}
-  \includegraphics[width=\linewidth]{graphs/qln.pdf}
+  \includegraphics[width=\linewidth]{\graphPath qln.pdf}
 \end{subfigure}
 \\[0.5cm]
 \begin{subfigure}{.3\linewidth}
   \centering
 \caption{Fiscal effect} \label{fig:decomp_mean_tau}
-  \includegraphics[width=\linewidth]{graphs/qTau.pdf}
+  \includegraphics[width=\linewidth]{\graphPath qTau.pdf}
 \end{subfigure}%
 \hfill
 \begin{subfigure}{.3\linewidth}
   \centering
 \caption{Price effect} \label{fig:decomp_mean_P}
-  \includegraphics[width=\linewidth]{graphs/qP.pdf}
+  \includegraphics[width=\linewidth]{\graphPath qP.pdf}
 \end{subfigure}
 \hfill
 \begin{subfigure}{.3\linewidth}
   \centering
 \caption{Residual} \label{fig:decomp_mean_Resn}
-  \includegraphics[width=\linewidth]{graphs/qResn.pdf}
+  \includegraphics[width=\linewidth]{\graphPath qResn.pdf}
 \end{subfigure}
 \\[0.5cm]
 {\footnotesize \textbf{Notes:} Figure~\ref{fig:decomp} shows the results for 20 selected countries:
@@ -882,7 +845,7 @@ Australia, Switzerland and Japan.}
 
 The inequality effects of immigration are described in Figure~\ref{fig:utility_inequality_effects}. We consider the same labor market specifications and immigration shocks as in the previous section.
 
-Figures \ref{fig:utility_inequality_effects_b} to \ref{fig:utility_inequality_effects_d} show the inequality effects of the three immigration shocks (low-skilled, high-skilled, and actual education mix, respectively) by country. Unsurprisingly, low-skilled immigration induces inegalitarian effects (from 0.1-0.2\% in Denmark to 0.47-0.52\% in Greece). On the contrary, high-skilled immigration induces egalitarian effects (from 0.25-0.40\% in Canada to 1.1-1.6\% in Italy). At the actual education-mix, the effect on inequality can be positive (in countries where immigrants are less educated than the natives) or negative (in selective countries).
+Figures \ref{fig:utility_inequality_effects_b} to \ref{fig:utility_inequality_effects_d} show the inequality effects of the three immigration shocks (low-skilled, high-skilled, and actual education mix, respectively) by country. Unsurprisingly, low-skilled immigration induces inegalitarian effects (from 0.1 to 0.2 percent in Denmark to 0.47 to 0.52 percent in Greece). On the contrary, high-skilled immigration induces egalitarian effects (from 0.25 to 0.40 percent in Canada to 1.1 to 1.6 percent in Italy). At the actual education-mix, the effect on inequality can be positive (in countries where immigrants are less educated than the natives) or negative (in selective countries).
 
 In Figure~\ref{fig:utility_inequality_effects_a}, we compute the unweighted mean effects of all countries under the seven variants of the model. Differences across specifications are in the same vein as in the previous section. The most important inequality responses are obtained when labor force participation rates are exogenous and maximal ($LFP=1$). However, differences between specifications are relatively small in the case of high-skilled immigration, and negligible at the actual education mix or in the case of high-skilled immigration.
 
@@ -912,25 +875,25 @@ The wage effect is larger when the labor force participation rate is exogenous a
 \begin{subfigure}{.45\linewidth}
   \centering
   \caption{Unweighted mean effect} \label{fig:utility_inequality_effects_a}
-  \includegraphics[width=\linewidth]{graphs/UtilityIneq.pdf}
+  \includegraphics[width=\linewidth]{\graphPath UtilityIneq.pdf}
 \end{subfigure}
 \hfill
 \begin{subfigure}{.45\linewidth}
   \centering
     \caption{Effect by country: low-skilled immigration} \label{fig:utility_inequality_effects_b}
-  \includegraphics[width=\linewidth]{graphs/UtilityIneq_LS.pdf}
+  \includegraphics[width=\linewidth]{\graphPath UtilityIneq_LS.pdf}
 \end{subfigure}
 \\[0.5cm]
 \begin{subfigure}{.45\linewidth}
   \centering
      \caption{Effect by country: high-skilled immigration} \label{fig:utility_inequality_effects_c}
-  \includegraphics[width=\linewidth]{graphs/UtilityIneq_HS.pdf}
+  \includegraphics[width=\linewidth]{\graphPath UtilityIneq_HS.pdf}
 \end{subfigure}
 \hfill
 \begin{subfigure}{.45\linewidth}
   \centering
     \caption{Effect by country: actual education mix} \label{fig:utility_inequality_effects_d}
-  \includegraphics[width=\linewidth]{graphs/UtilityIneq_LS+HS.pdf}
+  \includegraphics[width=\linewidth]{\graphPath UtilityIneq_LS+HS.pdf}
 \end{subfigure}
 \\[0.5cm]
 {\footnotesize \textbf{Notes:} Figure~\ref{fig:utility_inequality_effects} shows the results for 20 selected countries: the 15 members states of the European Union (EU15), the US, Canada, Australia, Switzerland and Japan. }
@@ -952,37 +915,37 @@ force) -- Sensitivity to labor market modeling}
 \begin{subfigure}{.3\linewidth}
 \caption{Wage effect} \label{fig:decomp_mean_WINC}
   \centering
-  \includegraphics[width=\linewidth]{graphs/qWnINC.pdf}
+  \includegraphics[width=\linewidth]{\graphPath qWnINC.pdf}
 \end{subfigure}
 \hfill
 \begin{subfigure}{.3\linewidth}
   \centering
   \caption{Employment effect} \label{fig:decomp_mean_URINC}
-  \includegraphics[width=\linewidth]{graphs/qURnINC.pdf}
+  \includegraphics[width=\linewidth]{\graphPath qURnINC.pdf}
 \end{subfigure}
 \hfill
 \begin{subfigure}{.3\linewidth}
   \centering
   \caption{Labor force participation effect} \label{fig:decomp_mean_lnINC}
-  \includegraphics[width=\linewidth]{graphs/qlnINC.pdf}
+  \includegraphics[width=\linewidth]{\graphPath qlnINC.pdf}
 \end{subfigure}
 \\[0.5cm]
 \begin{subfigure}{.3\linewidth}
   \centering
   \caption{Fiscal effect} \label{fig:decomp_mean_tauINC}
-  \includegraphics[width=\linewidth]{graphs/qTauINC.pdf}
+  \includegraphics[width=\linewidth]{\graphPath qTauINC.pdf}
 \end{subfigure}%
 \hfill
 \begin{subfigure}{.3\linewidth}
   \centering
   \caption{Price effect} \label{fig:decomp_mean_PINC}
-  \includegraphics[width=\linewidth]{graphs/qPINC.pdf}
+  \includegraphics[width=\linewidth]{\graphPath qPINC.pdf}
 \end{subfigure}
 \hfill
 \begin{subfigure}{.3\linewidth}
   \centering
   \caption{Residual} \label{fig:decomp_mean_ResnINC}
-  \includegraphics[width=\linewidth]{graphs/qResnINC.pdf}
+  \includegraphics[width=\linewidth]{\graphPath qResnINC.pdf}
 \end{subfigure}
 \\[0.5cm]
 {\footnotesize \textbf{Notes:} Figure~\ref{fig:decomp_INC} shows the results for 20 selected countries:
@@ -995,9 +958,9 @@ Australia, Switzerland and Japan.}
 
 \subsection{Do elasticities matter?} \label{sensitivity_to_parameters}
 
-Finally, it is worth investigating whether the labor market specification matters more or less than the calibration of common elasticities. Departing from the benchmark model with endogenous labor force and unemployment rates, we change the level of four important elasticities, and we assess the sensitivity of the average welfare responses to the same immigration shocks (low-skilled, high-skilled, and actual education mix, respectively). We first reduce the inverse of the elasticity of labor supply to income $\left( \eta \right)$ from 10 to 5.\ This means that the labor supply elasticity increases from 0.1 to 0.2.\footnote{We also conducted further sensitivity checks with respect to the inverse labor supply elasticity. In a review of the literature, \citet{Card1991} points to a range of $[2,20]$ for this parameter. We find no major changes in our results when setting $\eta$ equal to these bounds. These unreported results are available upon request.} Secondly, we double the country-specific costs of opening a vacancy $\left( \kappa _{s}\right) $ in all countries. Thirdly, we reduce the elasticity of substitution between different skill types $\left( \sigma_{1}\right) $ from 2 to 1.5, thereby increasing the level of complementarity between skill groups. Fourthly, we increase the elasticity of substitution between natives and immigrants $\left( \sigma _{2}\right) $ from 20 to 50, making immigrants and natives more substitutable.
+Finally, it is worth investigating whether the labor market specification matters more or less than the calibration of common elasticities. Departing from the benchmark model with endogenous labor force and unemployment rates, we change the level of four important elasticities, and we assess the sensitivity of the average welfare responses to the same immigration shocks (low-skilled, high-skilled, and actual education mix, respectively). We first increase the inverse of the elasticity of labor supply to income $\left( \eta \right)$ from $4/3$ to $2$. This means that the labor supply elasticity reduces from 0.75 to 0.5. Secondly, we double the country-specific costs of opening a vacancy for high-skilled workers $\left( \kappa _{h}\right) $ in all countries. Thirdly, we reduce the elasticity of substitution between different skill types $\left( \sigma_{1}\right) $ from 2 to 1.5, thereby increasing the level of complementarity between skill groups. Fourthly, we increase the elasticity of substitution between natives and immigrants $\left( \sigma _{2}\right) $ from 20 to 50, making immigrants and natives more substitutable.
 
-Results for the average welfare under the four alternative parameter sets are depicted in Figure~\ref{fig:utility_sensitivity_param}. Qualitatively, our results are robust to the choice of elasticities. Only in six out of 60 cases (3 shocks times 20 countries), the parameter choice has an impact on the sign of the average welfare effect. Quantitatively, however, we find that our results are highly robust to $\kappa _{s}$ and $\sigma _{1}$, but sensitive to $\eta $ and $\sigma _{2}$. Greater welfare gains are obtained when labor supply is more elastic, although we confess that the alternative level used in Figure~\ref{fig:utility_sensitivity_param} can be considered as an upper bound. More importantly, results are very sensitive to the elasticity of substitution between immigrants and natives $\left( \sigma _{2}\right),$ which is a source of debate in the literature. Smaller welfare gains are obtained when immigrants are closer substitutes for native workers. In sum, the choice of the elasticity of substitution between immigrants and natives and, to a lesser extent, of the elasticity of labor supply to income is more important than the modeling of the labor market specification.
+Results for the average welfare under the four alternative parameter sets are depicted in Figure~\ref{fig:utility_sensitivity_param}. Qualitatively, our results are robust to the choice of elasticities. Only in six out of 60 cases (3 shocks times 20 countries), the parameter choice has an impact on the sign of the average welfare effect. Quantitatively, however, we find that our results are highly robust to $\kappa _{h}$ and $\sigma _{1}$, but sensitive to $\eta $ and $\sigma _{2}$. Lower welfare gains are obtained when labor supply is less elastic, although the alternative level used in Figure~\ref{fig:utility_sensitivity_param} can be considered as a lower bound. More importantly, results are very sensitive to the elasticity of substitution between immigrants and natives $\left( \sigma _{2}\right),$ which is a source of debate in the literature. Smaller welfare gains are obtained when immigrants are closer substitutes for native workers. In sum, the choice of the elasticity of substitution between immigrants and natives and, to a lesser extent, of the elasticity of labor supply to income is more important than the modeling of the labor market specification.
 
 \newgeometry{left=1cm,right=1cm,top=2cm,bottom=2cm,nohead}
 \begin{landscape}
@@ -1010,25 +973,25 @@ Results for the average welfare under the four alternative parameter sets are de
 \begin{subfigure}{.45\linewidth}
   \centering
   \caption{Unweighted mean effect}
-  \includegraphics[width=\linewidth]{graphs/sens_Utility.pdf}
+  \includegraphics[width=\linewidth]{\graphPath sens_Utility.pdf}
 \end{subfigure}%
 \hfill
 \begin{subfigure}{.45\linewidth}
   \centering
     \caption{Effect by country: low-skilled immigration}
-  \includegraphics[width=\linewidth]{graphs/sens_Utility_LS.pdf}
+  \includegraphics[width=\linewidth]{\graphPath sens_Utility_LS.pdf}
 \end{subfigure}
 \\[0.5cm]
 \begin{subfigure}{.45\linewidth}
   \centering
       \caption{Effect by country: high-skilled immigration}
-  \includegraphics[width=\linewidth]{graphs/sens_Utility_HS.pdf}
+  \includegraphics[width=\linewidth]{\graphPath sens_Utility_HS.pdf}
 \end{subfigure}%
 \hfill
 \begin{subfigure}{.45\linewidth}
   \centering
         \caption{Effect by country: actual education mix}
-  \includegraphics[width=\linewidth]{graphs/sens_Utility_LS+HS.pdf}
+  \includegraphics[width=\linewidth]{\graphPath sens_Utility_LS+HS.pdf}
 \end{subfigure}
 \\[0.5cm]
 {\footnotesize \textbf{Notes:} Figure~\ref{fig:utility_sensitivity_param} shows the results for 20 selected countries:
@@ -1042,7 +1005,7 @@ Australia, Switzerland and Japan.}
 
 \section{Concluding remarks} \label{conclusion}
 
-General equilibrium models have been increasingly used to assess the welfare and inequality effects of immigration in the advanced countries. However, in this literature, the concrete formalization of the labor market varies drastically across different studies. The present paper analyzes to what extent labor market specification matters for assessing the the welfare and inequality effects of immigration on OECD countries. To this end, we build and parameterize a general equilibrium model that allows to compare seven labor market specifications. These variants combine different assumptions concerning labor supply decisions, unemployment rates and wage levels, as well as different calibration strategies. Quantitatively, we find that the labor market specification has little effect when assessing the welfare and inequality analyses, even if labor market responses influence the other transmission channels. Firstly, modelling unemployment slightly increases the the average welfare effects from immigration, as immigrant workers are found to boost firms' profits and generate a job creation effect -- i.e. slightly more optimistic results are obtained when the model allows for search frictions in the labor market. Secondly, inequality effects are slightly more beneficial or less detrimental when labor force participation is endogenized. Indeed, inequality responses to immigration are found to be particularly driven by wage affects, which are further amplified when the labor force participation rate is exogenously set to unity, rather than endogenously determined.
+General equilibrium models have been increasingly used to assess the welfare and inequality effects of immigration in the advanced countries. However, in this literature, the concrete formalization of the labor market varies drastically across different studies. The present paper analyzes to what extent labor market specification matters for assessing the the welfare and inequality effects of immigration on OECD countries. To this end, we build and parameterize a general equilibrium model that allows to compare eight labor market specifications. These variants combine different assumptions concerning labor supply decisions, unemployment rates and wage formation, as well as different calibration strategies. Quantitatively, we find that the labor market specification has little effect when assessing the welfare and inequality analyses, even if labor market responses influence the other transmission channels. Firstly, modelling unemployment slightly increases the the average welfare effects from immigration, as immigrant workers are found to boost firms' profits and generate a job creation effect -- i.e. slightly more optimistic results are obtained when the model allows for search frictions in the labor market. Secondly, inequality effects are slightly more beneficial or less detrimental when labor force participation is endogenized. Indeed, inequality responses to immigration are found to be particularly driven by wage affects, which are further amplified when the labor force participation rate is exogenously set to unity, rather than endogenously determined.
 
 Overall, our analysis suggests that the average welfare and inequality responses to immigration are fairly robust to the specification of the labor market. The specification choice is less important than the choice of the elasticity of substitution between immigrants and natives, at least when dividing the labor force into broad categories of workers according to their education level.
 
